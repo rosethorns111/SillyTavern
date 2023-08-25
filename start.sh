@@ -24,6 +24,7 @@ fi
 # if running on replit patch whitelist
 if [ ! -z "$REPL_ID" ]; then
   echo -e "Running on Repl.it... \nPatching Whitelist..."
+  bash start.sh
   sed -i 's|whitelistMode = true|whitelistMode = false|g' "config.conf"
 fi
 
